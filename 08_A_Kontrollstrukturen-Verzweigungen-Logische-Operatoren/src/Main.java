@@ -21,7 +21,7 @@ public class Main {
         // Read a user input and save it to another string called s3. The user should type in "Hello" (just like s1/s2).
         // Now compare s3 with s1. Is it still true?
         System.out.println("Write down Hello");
-        String s3 = UserInput.nextLine() ;
+        String s3 = UserInput.nextLine();
         // Compare the strings here with  "=="
         boolean stringCompare2 = s1 == s3;
         System.out.println(stringCompare2);
@@ -33,9 +33,10 @@ public class Main {
         ////// The first one does not work, it says false because of something
 
         // Compare the strings here with "equals"
-        boolean stringCompare3 = s1 .equals(s3);
-        System.out.println(stringCompare3);System.out.println();
-
+        boolean stringCompare3 = s1.equals(s3);
+        System.out.println(stringCompare3);
+        System.out.println();
+        // Könnte man direkt in den sout schreiben
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
@@ -43,10 +44,10 @@ public class Main {
         //     by the scanner below so, that the output will be: "You clearly read the instructions carefully!"
 
         Scanner scannerExercise11 = new Scanner(System.in);
-        System.out.println("Enter a string!");
+        System.out.println("Write a string!");
         String inputExercise11 = scannerExercise11.nextLine();
 
-        if(inputExercise11.equals("a string!")) {
+        if (inputExercise11.equals("a string!")) {
             System.out.println("You clearly read the instructions carefully!");
         } else {
             System.out.println("Missed the chance!");
@@ -63,8 +64,8 @@ public class Main {
         //      If not, print "Number is not between 50 and 100".
         //      Test your program with reasonable values like 25, 75, 150
         System.out.println("Write down a number");
-        int randomNumber = UserInput.nextInt() ;
-        if (randomNumber > 50 && randomNumber <100) {
+        int randomNumber = UserInput.nextInt();
+        if (randomNumber > 50 && randomNumber < 100) {
             System.out.println("Number is between 50 and 100");
         } else {
             System.out.println("Number is not between 50 and 100");
@@ -78,8 +79,9 @@ public class Main {
         //      If false, print, that the number is in the 50-100 bound.
         //      Test your program with reasonable values like 25, 75, 150
         System.out.println("Write down one more number");
-        int randomNumber2 = UserInput.nextInt(); ;
-        if (randomNumber2 < 50 || randomNumber2 > 100 ) {
+        int randomNumber2 = UserInput.nextInt();
+        ;
+        if (randomNumber2 < 50 || randomNumber2 > 100) {
             System.out.println("That number is out of the 50-100 bound");
         } else {
             System.out.println("That number is in the 50-100 bound");
@@ -93,7 +95,7 @@ public class Main {
         boolean lightsTurnedOff = true;
         if (!(lightsTurnedOff)) {
             System.out.println("Not watching a movie with lights on...!");
-        }   else {
+        } else {
             System.out.println("Movie time!");
         }
 
@@ -112,9 +114,9 @@ public class Main {
         //      "Do you want to go to the mountains? (true or false)"
         //      Assign the variables "goToBeach" and "goToMountains" the answers of the user input.
         System.out.println("Do you want to go to the beach? (true or false)");
-        boolean goToBeach = UserInput.nextBoolean() ;
+        boolean goToBeach = UserInput.nextBoolean();
         System.out.println("Do you want to go to the mountains? (true or false)");
-        boolean goToMountains = UserInput.nextBoolean() ;
+        boolean goToMountains = UserInput.nextBoolean();
         if (goToBeach ^ goToMountains) {
 
             if (goToBeach) {
@@ -127,7 +129,7 @@ public class Main {
         }
         if (goToBeach) {
             System.out.println("You can not go to both due to time constrains");
-        }   else {
+        } else {
             System.out.println("Do not be lazy, let us go somewhere");
         }
         //      Use an if-statement to check if you're going to exactly one destination, but not both or neither.
@@ -143,7 +145,6 @@ public class Main {
         //          then print: "Don't be lazy, let's go somewhere!"
 
         //      Solve this task with only an XOR, but not an OR or an AND.
-
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 07");
@@ -167,15 +168,16 @@ public class Main {
         System.out.println("In which EMV'S are you?");
         byte emvYear = UserInput.nextByte();
         System.out.println("Did you pay the fee (true or false)?");
-        boolean paidFee = UserInput.nextBoolean() ;
+        boolean paidFee = UserInput.nextBoolean();
         System.out.println("Were you sick recently (true or false)?");
-        boolean sick = UserInput.nextBoolean() ;
+        boolean sick = UserInput.nextBoolean();
 
-        if ((emvYear<3)&&(paidFee)&&(!sick)){
+        if ((emvYear < 3) && (paidFee) && (!sick)) {
             System.out.println("The student can attend the field trip!");
-        }   else {
-            System.out.println("The student cannot attend the field trip.");
+        } else {
+            System.out.println("The student cannot attend the field trip!");
         }
+
 
         scannerExercise11.close();
         UserInput.close();
