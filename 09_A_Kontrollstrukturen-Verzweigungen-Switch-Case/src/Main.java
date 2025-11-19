@@ -58,7 +58,7 @@ public class Main {
         //     Example:  "January" -> "Winter"
         //     Example: "EMVs" -> "Not a month!";
         //     Write the old switch-statement so, that it only contains 4 breaks.
-        UserInput.nextLine();2
+        UserInput.nextLine();
         System.out.println("Write down a month");
         String month = UserInput.nextLine() ;
 
@@ -127,6 +127,7 @@ public class Main {
         //      Output: "Mage (Strength: 3, Agility: 4, Intelligence: 9)"
         System.out.println("Select a class, write it correct down (1-Warrior, 2-Mage, 3-Rogue, 4-Cleric)");
 
+        UserInput.nextLine();
         String rpp = UserInput.nextLine();
 
         switch (rpp) {
@@ -162,48 +163,58 @@ public class Main {
         //      8: hachi
         //      9: kyuu
         //      default: Mukō na sūchi
-        System.out.println("Write down the number wich should get translated from 0-9");
+        System.out.println("Write down the number which should get translated from 0-9");
         byte wordnumber = UserInput.nextByte(); ;
         System.out.println("Write down a number from 1-3 for the language (1: German. 2: English 3: English)");
         byte wordlanguage = UserInput.nextByte();
 
         switch (wordlanguage){
-            case 1-> switch (wordnumber) {
-                case 1 ->
-                case 2 ->
-                case 3 ->
-                case 4 ->
-                case 5 ->
-                case 6 ->
-                case 7 ->
-                case 8 ->
-                case 9 ->
-                default ->
+            case 1 -> {
+                switch (wordnumber) {
+                case 0 -> System.out.println("Null");
+                case 1 -> System.out.println("Eins");
+                case 2 -> System.out.println("Zwei");
+                case 3 -> System.out.println("Drei");
+                case 4 -> System.out.println("Vier");
+                case 5 -> System.out.println("Fünf");
+                case 6 -> System.out.println("Sechs");
+                case 7 -> System.out.println("Sieben");
+                case 8 -> System.out.println("Acht");
+                case 9 -> System.out.println("Neun");
+                default -> System.out.println("Your number is not between 0-9");
             }
-          case 2-> switch (wordnumber) {
-              case 1 ->
-              case 2 ->
-              case 3 ->
-              case 4 ->
-              case 5 ->
-              case 6 ->
-              case 7 ->
-              case 8 ->
-              case 9 ->
-              default ->
             }
-          Case 3-> switch (wordnumber) {
-                case 1 ->
-                case 2 ->
-                case 3 ->
-                case 4 ->
-                case 5 ->
-                case 6 ->
-                case 7 ->
-                case 8 ->
-                case 9 ->
-                default ->
-            }
+          case 2-> {
+              switch (wordnumber) {
+              case 0 ->  System.out.println("Zero");
+              case 1 ->  System.out.println("One");
+              case 2 ->  System.out.println("Two");
+              case 3 ->  System.out.println("Three");
+              case 4 ->  System.out.println("Four");
+              case 5 ->  System.out.println("Five");
+              case 6 ->  System.out.println("Six");
+              case 7 ->  System.out.println("Seven");
+              case 8 ->  System.out.println("Eight");
+              case 9 ->  System.out.println("Nine");
+              default -> System.out.println("Your number is not between 0-9");
+            };
+          }
+          case 3-> {
+              switch (wordnumber) {
+                case 0 -> System.out.println("Zero");
+                case 1 -> System.out.println("ichi");
+                case 2 -> System.out.println("ni");
+                case 3 -> System.out.println("san");
+                case 4 -> System.out.println("shir");
+                case 5 -> System.out.println("go");
+                case 6 -> System.out.println("roku");
+                case 7 -> System.out.println("nana");
+                case 8 -> System.out.println("hachi");
+                case 9 -> System.out.println("kyuu");
+                default -> System.out.println("Your number is not between 0-9");
+            };
+          }
+            default -> System.out.println("Your number is not between 1-3");
         }
 
         //--------------------------------------------------------------------------------------------------------------
@@ -212,6 +223,25 @@ public class Main {
         //      Write a small calculator. A user types in two numbers and an operation ('addition', 'subtraction', 'division', 'multiplication').
         //      Calculate the correct answer and print it out.
         //      Print a warning when the user tries to divide by 0 (Example: 2/0 -> number two must not be 0!
+        System.out.println("Small calculator, write down a number between 0 and 9");
+        byte numberOne = UserInput.nextByte();
+        System.out.println("Write down a second number");
+        byte numberTwo = UserInput.nextByte();
+        System.out.println("Write down if you want addition 1, substraction 2, division 3 and multiplication 4");
+        byte operator = UserInput.nextByte();
+
+        switch (operator) {
+            case 1 -> System.out.println(numberOne + numberTwo);
+            case 2 -> System.out.println(numberOne - numberTwo);
+            case 3 -> {
+                if (numberOne == 0 || numberTwo == 0) {
+                    System.out.println("You are not allowed to make a division with 0");
+                        }
+                        else { System.out.println(numberOne / numberTwo); }
+            }
+            case 4 -> System.out.println(numberOne * numberTwo);
+            default -> System.out.println("Maybe try to write it correct down");
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
