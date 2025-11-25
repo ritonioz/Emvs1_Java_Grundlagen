@@ -9,7 +9,7 @@ public class Main {
         //--------------------------------------------------------------------------------------------------------------
 
         //--------------------------------------------------------------------------------------------------------------
-/*        System.out.println("Exercise 01");
+        System.out.println("Exercise 01");
         // 01.  Consider the following code:
         //      Do not run this code immediately!
         //
@@ -135,7 +135,7 @@ public class Main {
         }
 
         System.out.println(whileSum_05); // Should be 2500
-*/
+
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 06");
         // 06.  Generate random numbers between 0 and 100 (inclusive) until you get 22.
