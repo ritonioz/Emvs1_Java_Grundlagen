@@ -4,17 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Unihockey testTeam = new Unihockey("UHC Visp","Blue",23);
+        Unihockey testTeam = new Unihockey("UHC Visp","Blue");
         Unihockey teamA = new Unihockey("UHC Visper Lions","Red",21);
         Unihockey teamB = new Unihockey("UHC Bürchen", "Blue", 17);
 
         System.out.println("How many Goals did Team A make?");
-        teamA.addGoalTeam(scanner.nextShort());
+        teamA.addGoal(scanner.nextShort());
         System.out.println("How many Goals did Team B make?");
-        teamB.addGoalTeam(scanner.nextShort());
-        teamA.addPenaltyTeam();
-        teamA.addPenaltyTeam();
-        teamB.addPenaltyTeam();
+        teamB.addGoal(scanner.nextShort());
+        teamA.addPenalty();
+        teamA.addPenalty();
+        teamB.addPenalty();
 
 
         teamA.statistic();
