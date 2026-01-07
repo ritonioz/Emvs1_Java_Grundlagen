@@ -7,6 +7,11 @@ public class Unihockey {
     public int penalty;
 
     //Constructors
+    public Unihockey (String nameTeam, String colorTeam){
+        this.nameTeam=nameTeam;
+        this.colorTeam=colorTeam;
+    }
+
     public Unihockey (String nameTeam, String colorTeam,int playersTotalTeam){
         this.nameTeam=nameTeam;
         this.colorTeam=colorTeam;
@@ -18,10 +23,10 @@ public class Unihockey {
     public void addGoalTeam(){
         this.goals ++;
     }
-    public void addGoalTeam(short amount) {
+    public void addGoal(short amount) {
         this.goals += amount;
     }
-    public void addPenaltyTeam(){
+    public void addPenalty(){
         this.penalty +=2;
     }
 
