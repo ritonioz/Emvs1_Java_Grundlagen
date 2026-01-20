@@ -34,15 +34,24 @@
             System.out.println(name);
         }
     }
-    public void printArrayValuesFromTo(int startPos, int endPos){
-        while(startPos<endPos){
-                System.out.println(names[startPos]);
-            startPos++;
+        public void printArrayValuesFromTo(int startPos, int endPos) {
 
-            while (startPos>endPos){
-                System.out.println(startPos);
-                startPos--;
-            }
+            if (startPos <= endPos) {
+                // vorwärts zählen (z. B. 2 → 8)
+                while (startPos <= endPos) {
+                    System.out.println(names[startPos]);
+                    startPos++;
+                }
+            } else {
+                // rückwärts zählen (z. B. 8 → 2)
+                while (startPos >= endPos) {
+                    System.out.println(names[startPos]);
+                    startPos--;
+                }
+
+
+
+
         }
     }
 }
